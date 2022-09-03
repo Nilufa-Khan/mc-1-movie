@@ -42,7 +42,12 @@ public class Movie {
     }
 
     //complete the parameterized constructor
-    public Movie(int movieId, String movieName, String genre, String releaseDate) {
 
+
+    public Movie(int movieId, String movieName, String genre, String releaseDate) {
+        this.movieId = movieId;
+        this.movieName = movieName;
+        this.genre = genre;
+        this.releaseDate = releaseDate;
     }
 }
