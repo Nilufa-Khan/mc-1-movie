@@ -15,13 +15,19 @@ public class MovieService {
 
 
         //create HashMap object and add all the Movie object inside it
+        Map<Movie,Integer> movieMap = new HashMap<>();
+        movieMap.put(m1,5);
+        movieMap.put(m2,5);
+        movieMap.put(m3,2);
+        movieMap.put(m4,4);
+        movieMap.put(m5,4);
 
         //Key will be movie object and value will be rating ranging from 1 to 5
 
         //return the HashMap object
         Map map = new HashMap();
 
-        return map;
+        return movieMap;
     }
 
     public Set<String> getMovieNameWithRating4(Map<Movie,Integer> map,int rating){
