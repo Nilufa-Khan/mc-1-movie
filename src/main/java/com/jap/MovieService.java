@@ -25,23 +25,31 @@ public class MovieService {
         //Key will be movie object and value will be rating ranging from 1 to 5
 
         //return the HashMap object
-        Map map = new HashMap();
 
         return movieMap;
     }
 
     public Set<String> getMovieNameWithRating4(Map<Movie,Integer> map,int rating){
         //Create a TreeSet object
-
+            Set<String> stringSet = new TreeSet<>();
         //Use entrySet() method to iterate through the map object
 
+        for(Map.Entry<Movie,Integer> mp : map.entrySet()){
+
+            //System.out.println(mp.getValue());
+            if(mp.getValue() == rating){
+                stringSet.add(mp.getKey().getMovieName());
+
+            }
+
+        }
         //retrieve all the movies name having rating as 4
 
         //Store the movie name in TreeSet object
 
         //return the TreeSet object
 
-      return null;
+      return stringSet;
     }
 
     public List<String> getMovieWithHighestRating(Map<Movie,Integer> map){
